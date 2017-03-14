@@ -5,10 +5,10 @@ services:
         build: .
         image: s1lvester/docker-ola:latest
         volumes:
-            - ola-config:/root/.ola
+            - ./config:/root/.ola
         ports:
-            - "80:9090"
-        
-volumes:
-    ola-config:
+            - "6454:6454"
+            - "9010:9010"
+            - "9090:9090"
+        network_mode: host
 
