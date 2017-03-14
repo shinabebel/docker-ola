@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+    ola:
+        build: .
+        image: s1lvester/docker-ola:latest
+        volumes:
+            - ola-config:/root/.ola
+        ports:
+            - "80:9090"
+        
+volumes:
+    ola-config:
+
