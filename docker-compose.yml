@@ -3,7 +3,7 @@ version: "2"
 services:
     ola:
         build: .
-        image: s1lvester/docker-ola:latest
+        image: s1lvester/docker-ola:usb
         volumes:
             - ./config:/root/.ola
         ports:

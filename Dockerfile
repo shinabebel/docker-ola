@@ -17,6 +17,10 @@ RUN apt-get -qq update &&\
         --enable-python-libs \
         --disable-all-plugins \
         --enable-artnet \
+        --enable-opendmx \
+        --enable-usbserial \
+        --enable-usbdmx \
+        --enable-ftdidmx \
         --disable-root-check &&\
     make -j 2 &&\
     make install &&\
