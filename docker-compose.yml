@@ -3,12 +3,13 @@ version: "2"
 services:
     ola:
         build: .
-        image: s1lvester/docker-ola:latest
+        image: ultracombos/ola
         volumes:
-            - ./config:/root/.ola
+            - c:/docker/ola/config:/root/.ola
         ports:
-            - "6454:6454"
-            - "9010:9010"
             - "9090:9090"
         network_mode: host
+        environment:
+            PORT: 9090
+        command: ./start.sh
 
